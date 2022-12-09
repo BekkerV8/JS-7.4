@@ -19,7 +19,9 @@ describe("Github page tests", () => {
     await firstLink.click();
     await page.waitForSelector("h1");
     const title2 = await page.title();
-    expect(title2).toEqual("GitHub: Where the world builds software · GitHub");
+    expect(title2).toEqual(
+      "GitHub for teams · Build like the best teams on the planet · GitHub"
+    );
   }, 50000);
 
   test("The first link attribute", async () => {
@@ -33,6 +35,6 @@ describe("Github page tests", () => {
       visible: true,
     });
     const actual = await page.$eval(btnSelector, (link) => link.textContent);
-    expect(actual).toContain("Sign up for free");
+    expect(actual).toContain("Get started with Team");
   }, 50000);
 });
