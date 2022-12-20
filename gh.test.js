@@ -40,9 +40,9 @@ describe("Github page tests", () => {
 });
 
 describe("Add 3 new tests", () => {
-  afterEach(() => {
-    page.close();
-  });
+  // afterEach(() => {
+  //   page.close();
+  // });
 
   test("The page featurers title", async () => {
     await page.goto("https://github.com/features");
